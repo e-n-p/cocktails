@@ -1,27 +1,25 @@
-# Cocktails
+Create a CocktailService service allowing you to return a certain number of Cocktail type objects.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+A Cocktail type object must have the following characteristics:
 
-## Development server
+     A name field
+     A price field
+     An image field
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The service contains a getCocktails() method returning all available cocktails.
 
-## Code scaffolding
+The list of cocktails is displayed in a component named CocktailListComponent.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Let’s take advantage of this quest to also raise awareness about unit testing:
 
-## Build
+→ Create a file named test.spec.ts, place it in the app/ folder and paste the following code inside:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The service contains a getCocktails() method returning all cocktails
+The component must have a property named cocktails
+The CocktailService service is injected within the component.
+The component uses the service's getCocktails() method and retrieves the cocktails
+All cocktails are displayed via the ngFor directive within the template associated with the component
+The code for your component must be in the app/cocktail-list/ folder.
+The code for your service must be in the app/ folder
+The code must pass unit tests. To do this, use the ng test command.
