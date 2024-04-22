@@ -12,6 +12,6 @@ export class CocktailListComponent {
   public cocktails:Array<Cocktail> = [];
 
   constructor(private service: CocktailService){
-    this.cocktails = this.service.getCocktails();
+    this.service.getCocktails().subscribe(cocktails => this.cocktails = cocktails);
   }
 }
